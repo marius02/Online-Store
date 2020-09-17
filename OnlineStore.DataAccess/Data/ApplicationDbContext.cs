@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using OnlineStore.Models;
 
-namespace Online_Store.Data
+namespace OnlineStore.DataAccess.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -12,5 +10,6 @@ namespace Online_Store.Data
             : base(options)
         {
         }
+        public DbSet<Category> Categories { get; set; }
     }
 }
