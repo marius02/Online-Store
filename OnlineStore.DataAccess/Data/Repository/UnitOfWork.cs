@@ -11,6 +11,7 @@ namespace OnlineStore.DataAccess.Data.Repository
         {
             _db = db;
             Category = new CategoryRepository(db);
+            Product = new ProductRepository(db);
             SpCall = new SP_Call(db);
         }
 
@@ -25,6 +26,7 @@ namespace OnlineStore.DataAccess.Data.Repository
         }
 
         public ICategoryRepository Category { get; }
+        public IProductRepository Product { get; }
         public ISP_Call SpCall { get; }
     }
 }
